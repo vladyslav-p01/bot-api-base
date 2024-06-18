@@ -55,4 +55,9 @@ class SetChatMenuButtonNormalizer implements NormalizerInterface
     {
         return $data instanceof SetChatMenuButtonMethod;
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [SetChatMenuButtonMethod::class];
+    }
 }

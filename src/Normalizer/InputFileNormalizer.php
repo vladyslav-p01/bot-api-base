@@ -53,4 +53,9 @@ class InputFileNormalizer implements NormalizerInterface
     {
         return $data instanceof InputFileType;
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [InputFileType::class];
+    }
 }

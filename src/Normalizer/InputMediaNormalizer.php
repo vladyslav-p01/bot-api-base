@@ -70,4 +70,9 @@ class InputMediaNormalizer implements NormalizerInterface
     {
         return $data instanceof InputMediaType;
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [InputMediaType::class];
+    }
 }

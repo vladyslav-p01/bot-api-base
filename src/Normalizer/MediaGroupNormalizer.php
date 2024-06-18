@@ -62,4 +62,9 @@ class MediaGroupNormalizer implements NormalizerInterface
     {
         return $data instanceof SendMediaGroupMethod;
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [SendMediaGroupMethod::class];
+    }
 }

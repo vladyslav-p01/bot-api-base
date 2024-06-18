@@ -59,4 +59,9 @@ class UserProfilePhotosNormalizer implements DenormalizerInterface
     {
         return UserProfilePhotosType::class === $type;
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [UserProfilePhotosType::class];
+    }
 }

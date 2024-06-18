@@ -58,4 +58,15 @@ class JsonSerializableNormalizer implements NormalizerInterface
             $data instanceof MaskPositionType ||
             $data instanceof ForceReplyType;
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [
+            InlineKeyboardMarkupType::class,
+            ReplyKeyboardMarkupType::class,
+            ReplyKeyboardRemoveType::class,
+            MaskPositionType::class,
+            ForceReplyType::class
+        ];
+    }
 }

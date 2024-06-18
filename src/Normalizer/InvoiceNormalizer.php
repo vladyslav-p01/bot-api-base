@@ -52,4 +52,9 @@ class InvoiceNormalizer implements NormalizerInterface
     {
         return $data instanceof SendInvoiceMethod;
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [SendInvoiceMethod::class];
+    }
 }

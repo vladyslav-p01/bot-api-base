@@ -52,4 +52,9 @@ class SetMyCommandsNormalizer implements NormalizerInterface
     {
         return $data instanceof SetMyCommandsMethod;
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [SetMyCommandsMethod::class];
+    }
 }

@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Normalizer;
 use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
+use TgBotApi\BotApiBase\Method\AnswerInlineQueryMethod;
 use TgBotApi\BotApiBase\Method\EditMessageMediaMethod;
 
 /**
@@ -63,5 +64,10 @@ class EditMessageMediaNormalizer implements NormalizerInterface
     public function supportsNormalization($data, $format = null): bool
     {
         return $data instanceof EditMessageMediaMethod;
+    }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [EditMessageMediaMethod::class];
     }
 }

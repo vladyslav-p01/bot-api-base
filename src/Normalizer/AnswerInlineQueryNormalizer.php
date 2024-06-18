@@ -63,4 +63,9 @@ class AnswerInlineQueryNormalizer implements NormalizerInterface
     {
         return $data instanceof AnswerInlineQueryMethod;
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [AnswerInlineQueryMethod::class];
+    }
 }
