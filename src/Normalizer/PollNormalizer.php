@@ -52,4 +52,9 @@ class PollNormalizer implements NormalizerInterface
     {
         return $data instanceof SendPollMethod;
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [SendPollMethod::class];
+    }
 }
